@@ -24,5 +24,14 @@ public partial class Graphs : ContentPage
         series.YBindingPath = "KW";
 
         chart.Series.Add(series);
+
+        SfCircularChart circ = new SfCircularChart();
+        ViewModel viewModel = new ViewModel();
+        circ.BindingContext = viewModel;
+        PieSeries sr = new PieSeries();
+        sr.ItemsSource = viewModel.Data;
+        sr.XBindingPath = "Time";
+        sr.YBindingPath = "KW";
+        circ.Series.Add(sr);
     }
 }

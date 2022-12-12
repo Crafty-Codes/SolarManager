@@ -4,8 +4,8 @@
              x:Class="SolarManager.Graphs"
              Title="Graphs"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <Grid>
+
+    <StackLayout Margin="20">
         <chart:SfCartesianChart>
             <chart:SfCartesianChart.Title>
                 <Label Text="Energie" />
@@ -26,11 +26,17 @@
                     </chart:NumericalAxis.Title>
                 </chart:NumericalAxis>
             </chart:SfCartesianChart.YAxes>
-            
+
             <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Time" 
                         YBindingPath="KW" />
-        
-</chart:SfCartesianChart>
-    </Grid>
+
+        </chart:SfCartesianChart>
+
+        <chart:SfCircularChart>
+            <chart:PieSeries ItemsSource="{Binding Data}" 
+                    XBindingPath="Time" 
+                    YBindingPath="KW"/>
+        </chart:SfCircularChart>
+    </StackLayout>
 </ContentPage>
