@@ -5,20 +5,50 @@
              Title="Settings">
     <StackLayout>
         <ScrollView>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="5*"/>
-            </Grid.ColumnDefinitions>
-            <Switch Grid.Row="0" Grid.Column="0"/>
-            <Label Grid.Row="0" Grid.Column="1" FontSize="Body" VerticalTextAlignment="Center">Dark mode</Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <!--Switcher darkmode-->
+                <Switch Grid.Row="0" Grid.Column="0"/>
+                <Label Grid.Row="0" Grid.Column="1" FontSize="Body" VerticalTextAlignment="Center">Dark mode</Label>
+                
+                <!---->
+                <CheckBox Grid.Row="1" Grid.Column="0"/>
+                
+                <!---->
+                <Slider Grid.Row="2" Grid.Column="0"/>
+                <Stepper Grid.Row="3" Grid.Column="0"/>
 
-        </Grid>
+                <!---->
+                <Picker Grid.Row="4" Grid.Column="0">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Baboon</x:String>
+                            <x:String>Capuchin Monkey</x:String>
+                            <x:String>Blue Monkey</x:String>
+                            <x:String>Squirrel Monkey</x:String>
+                            <x:String>Golden Lion Tamarin</x:String>
+                            <x:String>Howler Monkey</x:String>
+                            <x:String>Japanese Macaque</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
+                <!---->
+                <DatePicker Grid.Row="5" Grid.Column="0"/>
+                <TimePicker Grid.Row="6" Grid.Column="0"/>
+            </Grid>
         </ScrollView>
     </StackLayout>
 </ContentPage>
