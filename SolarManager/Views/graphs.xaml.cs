@@ -1,3 +1,4 @@
+using SolarManager.Views;
 using Syncfusion.Maui.Charts;
 
 namespace SolarManager;
@@ -8,6 +9,10 @@ public partial class Graphs : ContentPage
 	{
         this.BindingContext = new ViewModel();
         InitializeComponent();
+
+
+
+
         SfCartesianChart chart = new SfCartesianChart();
 
         DateTimeAxis primaryAxis = new DateTimeAxis();

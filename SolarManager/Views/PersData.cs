@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolarManager
+namespace SolarManager.Views
 {
 
     public class Person

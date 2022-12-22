@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarManager.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Entry x:Name="entry"
+                Placeholder="Enter Smartfox Ip"
+                Text="{Binding IpEntry}"
+                TextColor="{Binding IpEntryColor}"
+                PlaceholderColor="{Binding IpEntryPlaceholderColor}"/>
+
+            <Button
+                x:Name="SetIpBtn"
+                Text="Set Ip"
+                Command="{Binding SetIp}"
+                SemanticProperties.Hint="Set Ip of Smartfox"
+                Clicked="OnSend"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using SolarManager.Views;
 
 namespace SolarManager;
 
