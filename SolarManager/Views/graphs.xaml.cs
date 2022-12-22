@@ -1,4 +1,4 @@
-using SolarManager.Views;
+using SolarManager.Models;
 using Syncfusion.Maui.Charts;
 
 namespace SolarManager;
