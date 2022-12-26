@@ -50,15 +50,16 @@ namespace SolarManager.ViewModels
         private void SetIpHandler(object obj)
 
         {
-            Regex rx = new Regex(@"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$");
-            Match mc = rx.Match(IpEntry);
+            if (IpEntry != null) { 
+                Regex rx = new Regex(@"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$");
+                Match mc = rx.Match(IpEntry);
 
-            if (mc.Success)
-            {
-                IpEntryColor = new Color(0, 255, 0);
-                return;
+                if (mc.Success)
+                {
+                    IpEntryColor = new Color(0, 255, 0);
+                    return;
+                }
             }
-
             IpEntry = "";
             IpEntryPlaceholderColor = new Color(255, 0, 0);
         }
