@@ -4,9 +4,8 @@
              x:Class="SolarManager.FAQ"
              Title="FAQ">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label HorizontalTextAlignment="Center" FontSize="Title">FAQ</Label>
+        <Label HorizontalTextAlignment="Center" FontSize="Subtitle">Some Help text</Label>
+        <Label HorizontalTextAlignment="Center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed augue lacus viverra vitae congue eu. Id neque aliquam vestibulum morbi blandit cursus. Massa vitae tortor condimentum lacinia. Neque sodales ut etiam sit amet nisl purus in.</Label>
     </VerticalStackLayout>
 </ContentPage>
