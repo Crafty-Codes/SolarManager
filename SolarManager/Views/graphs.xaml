@@ -5,8 +5,13 @@
              Title="Graphs"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <ScrollView>
-        <StackLayout Margin="20">
-            <chart:SfCartesianChart>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <chart:SfCartesianChart Grid.Row="0">
                 <chart:SfCartesianChart.Title>
                     <Label Text="Energie" />
                 </chart:SfCartesianChart.Title>
@@ -32,12 +37,20 @@
                             YBindingPath="KW" />
 
             </chart:SfCartesianChart>
-
-            <chart:SfCircularChart>
-                <chart:PieSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Time" 
-                        YBindingPath="KW"/>
-            </chart:SfCircularChart>
-        </StackLayout>
+            
+            <FlexLayout JustifyContent="Center" Wrap="Wrap" Grid.Row="1">
+                <chart:SfCircularChart>
+                    <chart:PieSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Time" 
+                            YBindingPath="KW"/>
+                </chart:SfCircularChart>
+                
+                <chart:SfCircularChart>
+                    <chart:PieSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Time" 
+                            YBindingPath="KW"/>
+                </chart:SfCircularChart>
+            </FlexLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>

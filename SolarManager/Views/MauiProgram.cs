@@ -18,8 +18,7 @@ public static class MauiProgram
             .ConfigureSyncfusionCore()
             .ConfigureFonts(fonts =>
             {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddFont("Segoe-UI.ttf", "SegoeUI");
             });
 
 #if DEBUG
