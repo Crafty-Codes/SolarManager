@@ -18,7 +18,7 @@ public static class MauiProgram
             .ConfigureSyncfusionCore()
             .ConfigureFonts(fonts =>
             {
-                fonts.AddFont("Segoe-UI.ttf", "SegoeUI");
+                fonts.AddFont("SEGOEUI", "SegoeUI");
             });
 
 #if DEBUG
